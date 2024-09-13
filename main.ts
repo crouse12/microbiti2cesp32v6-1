@@ -170,11 +170,11 @@ namespace microbiti2cesp32v6 {
     }
 
     //% group="6.Make"  
-    //% blockId=sendmake block="send make key %key | event %event | value1 %value1 | value2 %value2 | value3 %value3"
+    //% blockId=sendmake block="send make key %key | value1 %value1 | value2 %value2 | value3 %value3"
     //% weight=51
-    export function sendmake(key: string, event: string, value1: string, value2: string, value3: string):void {
+    export function sendmake(key: string, value1: string, value2: string, value3: string):void {
 	value1=value1+"&value2="+value2+"&value3="+value3;
-        sendi2cmessage("ifttt="+key+","+event+","+value1) 
+        sendi2cmessage("ifttt="+key+","+value1) 
 	basic.pause(200)
     }
 	
