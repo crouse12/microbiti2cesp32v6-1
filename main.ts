@@ -174,7 +174,7 @@ namespace microbiti2cesp32v6 {
     //% weight=51
     export function sendmake(key: string, value1: string, value2: string, value3: string):void {
 	value1=value1+"&value2="+value2+"&value3="+value3;
-        sendi2cmessage("ifttt="+key+","+value1) 
+        sendi2cmessage("make="+key+","+value1) 
 	basic.pause(200)
     }
 	
