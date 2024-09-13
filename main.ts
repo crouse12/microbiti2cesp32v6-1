@@ -365,15 +365,6 @@ namespace microbiti2cesp32v6 {
 	return parseFloat(a)
     } 
 
-    //% group="10.Make.com"  
-    //% blockId=sendmake block="send Make.com key %key | value1 %value1 | value2 %value2 | value3 %value3"
-    //% weight=15
-    export function sendmake(key: string, value1: string, value2: string, value3: string):void {
-	value1="?value1="+value1+"&value2="+value2+"&value3="+value3;
-        sendi2cmessage("httpclientget=hook.eu2.make.com,/"+key+"/"+value1) 
-	basic.pause(200)
-    }
-	
     function sendi2cmessage(command: string):void {
         for (let index = 0; index <= command.length-1; index++) {
         	pins.i2cWriteNumber(
